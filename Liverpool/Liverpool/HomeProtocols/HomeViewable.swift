@@ -7,4 +7,5 @@
 //
 
 protocol HomeViewable {
+  func updateViewWith(_ items: [ListViewModel])
 }

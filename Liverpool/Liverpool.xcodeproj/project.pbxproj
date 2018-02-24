@@ -17,6 +17,7 @@
 		E7DC19DD2041D7B90043B874 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19DC2041D7B90043B874 /* HomePresenter.swift */; };
 		E7DC19E02041D8260043B874 /* HomeViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19DF2041D8260043B874 /* HomeViewable.swift */; };
 		E7DC19E22041D8370043B874 /* HomePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19E12041D8370043B874 /* HomePresentable.swift */; };
+		E7DC19E52041ED820043B874 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19E42041ED820043B874 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E7DC19DC2041D7B90043B874 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		E7DC19DF2041D8260043B874 /* HomeViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewable.swift; sourceTree = "<group>"; };
 		E7DC19E12041D8370043B874 /* HomePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentable.swift; sourceTree = "<group>"; };
+		E7DC19E42041ED820043B874 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		E77A665E2041C834003C1DCD /* Liverpool */ = {
 			isa = PBXGroup;
 			children = (
+				E7DC19E32041ED6F0043B874 /* Models */,
 				E7DC19DE2041D8100043B874 /* HomeProtocols */,
 				E7DC19DB2041D7910043B874 /* Presenter */,
 				E7DC19D82041CFFC0043B874 /* APICall */,
@@ -122,6 +125,14 @@
 				E7DC19E12041D8370043B874 /* HomePresentable.swift */,
 			);
 			path = HomeProtocols;
+			sourceTree = "<group>";
+		};
+		E7DC19E32041ED6F0043B874 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7DC19E42041ED820043B874 /* ViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				E7DC19DA2041D0130043B874 /* APICall.swift in Sources */,
 				E7DC19E22041D8370043B874 /* HomePresentable.swift in Sources */,
 				E7DC19DD2041D7B90043B874 /* HomePresenter.swift in Sources */,
+				E7DC19E52041ED820043B874 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

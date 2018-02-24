@@ -9,7 +9,7 @@
 import Foundation
 
 protocol APIDelegate: class {
-  func recivedData(_ data: [String:Any])
+  func recivedData(_ data: [Any])
   func failed()
 }
 
@@ -33,7 +33,23 @@ class APICall {
                                                                     print("Could not get JSON from responseData as dictionary")
                                                                     return
         }
-        delegate.recivedData(receivedData)
+        guard let contents = receivedData["contents"] as? [[String: Any]], let firstData = contents.first, let mainContent = firstData["mainContent"] as? [[String: Any]] else { return }
+        
+        let resultListCollection = mainContent.filter({
+          let name = $0["name"] as? String ?? ""
+          return name == "Results List Collection"
+        })
+        
+        guard let resultContents = resultListCollection.first, let resultListContents = resultContents["contents"] as? [[String:Any]] else { return }
+        
+        let resultList = resultListContents.filter({
+          let type = $0["@type"] as? String ?? ""
+          return type == "ResultsList"
+        })
+        
+        guard let resultListDict = resultList.first, let records = resultListDict["records"] as? [Any] else { return }
+        
+        delegate.recivedData(records)
       } catch  {
         delegate.failed()
         return

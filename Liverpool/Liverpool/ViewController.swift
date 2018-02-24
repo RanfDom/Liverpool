@@ -27,4 +27,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: HomeViewable {
+  func updateViewWith(_ items: [ListViewModel]) {
+    print(items)
+  }
 }
