@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73B04AF55005A23090CD4439 /* Pods_Liverpool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D737C1F2CDBA1F896A8D90 /* Pods_Liverpool.framework */; };
 		E77A66602041C834003C1DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77A665F2041C834003C1DCD /* AppDelegate.swift */; };
 		E77A66622041C834003C1DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77A66612041C834003C1DCD /* ViewController.swift */; };
 		E77A66652041C834003C1DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77A66632041C834003C1DCD /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F3E8EA9FB7C47DE2C6DABE2 /* Pods-Liverpool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liverpool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Liverpool/Pods-Liverpool.debug.xcconfig"; sourceTree = "<group>"; };
+		B960BF89357B1A8DF3E95D7B /* Pods-Liverpool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liverpool.release.xcconfig"; path = "Pods/Target Support Files/Pods-Liverpool/Pods-Liverpool.release.xcconfig"; sourceTree = "<group>"; };
+		C8D737C1F2CDBA1F896A8D90 /* Pods_Liverpool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liverpool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77A665C2041C834003C1DCD /* Liverpool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liverpool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77A665F2041C834003C1DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E77A66612041C834003C1DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B04AF55005A23090CD4439 /* Pods_Liverpool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2DFB1851299381958C265BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8D737C1F2CDBA1F896A8D90 /* Pods_Liverpool.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C785E57677DF32DB3823C696 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F3E8EA9FB7C47DE2C6DABE2 /* Pods-Liverpool.debug.xcconfig */,
+				B960BF89357B1A8DF3E95D7B /* Pods-Liverpool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E77A66532041C834003C1DCD = {
 			isa = PBXGroup;
 			children = (
 				E77A665E2041C834003C1DCD /* Liverpool */,
 				E77A665D2041C834003C1DCD /* Products */,
+				C785E57677DF32DB3823C696 /* Pods */,
+				B2DFB1851299381958C265BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E77A666E2041C834003C1DCD /* Build configuration list for PBXNativeTarget "Liverpool" */;
 			buildPhases = (
+				903352D45EC6E92D6DD61297 /* [CP] Check Pods Manifest.lock */,
 				E77A66582041C834003C1DCD /* Sources */,
 				E77A66592041C834003C1DCD /* Frameworks */,
 				E77A665A2041C834003C1DCD /* Resources */,
+				03204737AA9797F17C403F76 /* [CP] Embed Pods Frameworks */,
+				B8F7C6618BD587E721071432 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03204737AA9797F17C403F76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Liverpool/Pods-Liverpool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		903352D45EC6E92D6DD61297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B8F7C6618BD587E721071432 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Liverpool/Pods-Liverpool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E77A66582041C834003C1DCD /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		E77A666F2041C834003C1DCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3E8EA9FB7C47DE2C6DABE2 /* Pods-Liverpool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +363,7 @@
 		};
 		E77A66702041C834003C1DCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B960BF89357B1A8DF3E95D7B /* Pods-Liverpool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
