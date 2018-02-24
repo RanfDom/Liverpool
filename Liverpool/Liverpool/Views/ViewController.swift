@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class ViewController: UIViewController {
 
@@ -45,6 +46,8 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let text = searchBar.text, !text.isEmpty else { return }
+    SwiftSpinner.show("Searching")
+    searchBar.resignFirstResponder()
     presenter?.search(text)
   }
 }
@@ -54,6 +57,7 @@ extension ViewController: HomeViewable {
     self.items = items
     DispatchQueue.main.async { [unowned self] in
       self.itemsTableView.reloadData()
+      SwiftSpinner.hide()
     }
   }
 }

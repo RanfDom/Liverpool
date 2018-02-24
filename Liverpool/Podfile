@@ -7,5 +7,6 @@ target 'Liverpool' do
   # Pods for Liverpool
   pod 'SDWebImage', '~> 4.0'
   pod 'Alamofire', '~> 4.6'
+  pod 'SwiftSpinner'
 
 end
