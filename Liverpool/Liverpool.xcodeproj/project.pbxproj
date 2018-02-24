@@ -13,6 +13,10 @@
 		E77A66652041C834003C1DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77A66632041C834003C1DCD /* Main.storyboard */; };
 		E77A66672041C834003C1DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77A66662041C834003C1DCD /* Assets.xcassets */; };
 		E77A666A2041C834003C1DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77A66682041C834003C1DCD /* LaunchScreen.storyboard */; };
+		E7DC19DA2041D0130043B874 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19D92041D0130043B874 /* APICall.swift */; };
+		E7DC19DD2041D7B90043B874 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19DC2041D7B90043B874 /* HomePresenter.swift */; };
+		E7DC19E02041D8260043B874 /* HomeViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19DF2041D8260043B874 /* HomeViewable.swift */; };
+		E7DC19E22041D8370043B874 /* HomePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC19E12041D8370043B874 /* HomePresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		E77A66662041C834003C1DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E77A66692041C834003C1DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E77A666B2041C834003C1DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7DC19D92041D0130043B874 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		E7DC19DC2041D7B90043B874 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E7DC19DF2041D8260043B874 /* HomeViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewable.swift; sourceTree = "<group>"; };
+		E7DC19E12041D8370043B874 /* HomePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,9 @@
 		E77A665E2041C834003C1DCD /* Liverpool */ = {
 			isa = PBXGroup;
 			children = (
+				E7DC19DE2041D8100043B874 /* HomeProtocols */,
+				E7DC19DB2041D7910043B874 /* Presenter */,
+				E7DC19D82041CFFC0043B874 /* APICall */,
 				E77A665F2041C834003C1DCD /* AppDelegate.swift */,
 				E77A66612041C834003C1DCD /* ViewController.swift */,
 				E77A66632041C834003C1DCD /* Main.storyboard */,
@@ -86,6 +97,31 @@
 				E77A666B2041C834003C1DCD /* Info.plist */,
 			);
 			path = Liverpool;
+			sourceTree = "<group>";
+		};
+		E7DC19D82041CFFC0043B874 /* APICall */ = {
+			isa = PBXGroup;
+			children = (
+				E7DC19D92041D0130043B874 /* APICall.swift */,
+			);
+			path = APICall;
+			sourceTree = "<group>";
+		};
+		E7DC19DB2041D7910043B874 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E7DC19DC2041D7B90043B874 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E7DC19DE2041D8100043B874 /* HomeProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				E7DC19DF2041D8260043B874 /* HomeViewable.swift */,
+				E7DC19E12041D8370043B874 /* HomePresentable.swift */,
+			);
+			path = HomeProtocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +249,10 @@
 			files = (
 				E77A66622041C834003C1DCD /* ViewController.swift in Sources */,
 				E77A66602041C834003C1DCD /* AppDelegate.swift in Sources */,
+				E7DC19E02041D8260043B874 /* HomeViewable.swift in Sources */,
+				E7DC19DA2041D0130043B874 /* APICall.swift in Sources */,
+				E7DC19E22041D8370043B874 /* HomePresentable.swift in Sources */,
+				E7DC19DD2041D7B90043B874 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
